@@ -1,0 +1,140 @@
+<?xml version="1.0"?><!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8"/>
+
+<style>
+
+
+
+body
+{
+background-repeat:no-repeat;
+
+}
+#ck
+{
+border:0px;
+animation:myfirsta 5s;
+}
+
+
+#hint ,#sh,#points,#c_disp
+{
+text-shadow: 2px 0 0 #ADD8E6, -2px 0 0 #ADD8E6, 0 2px 0 #ADD8E6, 0 -2px 0 #ADD8E6, 1px 1px #ADD8E6, -1px -1px 0 #ADD8E6, 1px -1px 0 #ADD8E6, -1px 1px 0 #ADD8E6;
+}
+
+#jum
+{
+
+text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+}
+
+@keyframes myfirst
+{
+to{margin:0px;transform:rotateX(0deg);}
+from{margin:200px;transform:rotateX(180deg);}
+}
+
+
+@keyframes myfirsta
+{
+to{display:inline;}
+from{display:hidden;}
+}
+
+
+
+@keyframes rotate
+{
+to{transform:rotateX(0deg);}
+from{transform:rotateX(180deg);}
+}
+
+#asb
+{
+animation:myfirst 4s;
+margin-top:3%;
+}
+
+#sh
+{
+animation:rotate 4s;
+}
+
+#hint
+{
+animation:rotate 4s;
+}
+
+h1{
+margin:0px;
+padding:0px;
+}
+
+#home
+{
+
+float:right;
+border:0px;
+}
+
+#ck:focus
+{
+opacity:1;
+}
+
+
+#ck
+{
+width:95%;
+max-width:250px;
+opacity:0.5;
+}
+</style>
+<script src="words_k.js"></script>
+<script src="settings.js">
+
+</script>
+
+
+
+
+</script>
+
+</head>
+<body  onload="init()">
+<div id="qrys"></div>
+<h1>
+
+<font color="Green">J</font><font color="Orange"><sub>u</sub></font><font color="Violet"><sup>m</sup></font><font color="Red"><sub>p</sub></font><font color="Green"><sup>l</sup></font><font color="Orange">Y</font> <a href="start.html"><img src="home.gif" width=30 id="home">
+
+
+</a>
+
+
+</h1>
+
+<div id="points">Point:</div><div id="c_disp"></div><br>
+
+<div id="sh"></div><br>
+
+<div id="hint"></div>
+
+<div id="noti"></div>
+
+<br>
+
+<div id="bo_b"><input type="text" id="ck"></div>
+
+<img id="asb" src="bt.gif" onclick="check()"  width="100">
+
+<br>
+
+
+</div>
+
+<script src="functions.js">
+
+</script>
+
+</body>
+
+</html>

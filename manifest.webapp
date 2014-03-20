@@ -1,0 +1,15 @@
+{
+  "name": "Jumply",
+  "description": "Jumply , The Jumpled Letter Game",
+  "launch_path": "/start.html",
+  "icons": {
+    "128": "icon.gif"
+  },
+  "developer": {
+    "name": "Jithin Sha",
+    "url": "http://fb.com/jithinsha.in"
+  },
+  "default_locale": "en"
+}
+
+

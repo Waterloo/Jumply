@@ -1,0 +1,131 @@
+<html>
+<head>
+
+<style>
+
+body
+{
+background-repeat:no-repeat;
+}
+
+@keyframes rotate
+{
+to{margin:0px;transform:rotateX(0deg);}
+from{margin:200px;transform:rotateX(180deg);}
+}
+
+.im
+{
+animation: rotate 5s;
+max-width:300px;
+
+}
+</style>
+<script src="settings.js">
+</script>
+
+<script src="jquery-1.10.2.min.js">
+
+</script>
+
+
+</head>
+<body  onload="init();update()">
+<h1><font color="Green">J</font><font color="Orange"><sub>u</sub></font><font color="Violet"><sup>m</sup></font><font color="Red"><sub>p</sub></font><font color="Green"><sup>l</sup></font><font color="Orange">Y</font></h1>
+
+<a href="index.html"><img src="start.gif" width=60% height=75 class="im"></a>
+<br>
+<a href="about.html"><img src="about.gif" width=60% height=75 class="im"></a>
+<br>
+<a href="settings.html"><img src="set.gif" width=60% height=75 class="im"></a>
+
+<script>
+function update()
+{
+
+var s;
+
+var l=new Date;
+var v=l.getFullYear()+','+(l.getMonth()-1)+','+l.getDate()+','+l.getHours()+','+l.getMinutes()+','+l.getSeconds();
+
+var url="Api.json";
+
+if(localStorage.ids)
+{
+var dv=JSON.parse(localStorage.ids);
+var vl=dv.length;
+var df=dv[vl-1];
+
+
+
+
+
+
+if(df)
+{
+url=url+"?id="+df;
+}
+
+}
+
+
+
+$.getJSON(url, function(data) {
+    mainfunction(data);
+});
+ 
+function mainfunction(data) {
+s=data;
+var counts=s['data']['id'].length;
+
+
+if(localStorage.words)
+{
+var words=JSON.parse(localStorage.words);
+var hints=JSON.parse(localStorage.hint);
+var ids=JSON.parse(localStorage.ids);
+}
+else
+{
+var words=new Array();
+var hints=new Array();
+var ids=new Array();
+
+}
+
+for(var i=0;i<counts;i++)
+{
+var w;
+w=data['data']['words'][i];
+words.push(w);
+
+
+var w=data['data']['hint'][i];
+hints.push(w);
+
+var w=data['data']['id'][i];
+ids.push(w);
+
+}
+
+hints=JSON.stringify(hints);
+words=JSON.stringify(words);
+ids=JSON.stringify(ids);
+
+localStorage.hint=hints;
+localStorage.words=words;
+localStorage.ids=ids;
+
+
+localStorage.last_update=v;
+
+	
+}
+
+
+return "updated";}
+
+
+
+
+</script>
