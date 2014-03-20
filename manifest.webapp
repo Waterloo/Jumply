@@ -3,7 +3,7 @@
   "description": "Jumply , The Jumpled Letter Game",
   "launch_path": "/start.html",
   "icons": {
-    "128": "icon.gif"
+    "128": "/icon.gif"
   },
   "developer": {
     "name": "Jithin Sha",
