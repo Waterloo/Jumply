@@ -2,7 +2,11 @@
 
 <style>
 
-
+*
+{
+	margin:0px;
+	font-family:sans;
+}
 
 body
 {
@@ -15,6 +19,12 @@ border:0px;
 animation:myfirsta 5s;
 }
 
+
+#points
+{
+	float:left;
+
+}
 
 #hint ,#sh,#points,#c_disp
 {
@@ -88,8 +98,20 @@ width:95%;
 max-width:250px;
 opacity:0.5;
 }
+
+#c_disp
+{
+	
+	float:right;
+
+}
+
+
+.glow
+{
+	font-weight:900;
+}
 </style>
-<script src="words_k.js"></script>
 <script src="settings.js">
 
 </script>
@@ -97,10 +119,8 @@ opacity:0.5;
 
 
 
-</script>
-
 </head>
-<body  onload="init()">
+<body background="b2.jpg">
 <div id="qrys"></div>
 <h1>
 
@@ -113,7 +133,7 @@ opacity:0.5;
 </h1>
 
 <div id="points">Point:</div><div id="c_disp"></div><br>
-
+<br>
 <div id="sh"></div><br>
 
 <div id="hint"></div>

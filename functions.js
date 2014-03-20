@@ -144,15 +144,15 @@ localStorage.points=pointh;
 else
 {
 
-noti.innerHTML='<font color="Red">Wrong !! Correct Word is '+word[rand]+'</font>';
+noti.innerHTML='<font color="Red" class="glow">Wrong !! Correct Word is '+word[rand]+'</font>';
 
 rand=get_rnd_no();
 
 
 no_up();
 
-sh.innerHTML='Jumpled Word:<font color="Orange" id="jum">'+shuffle_word(word[rand])+"</font>";
-
+sh.innerHTML='Jumpled Word:<font color="Orange" id="jum" class="glow">'+shuffle_word(word[rand])+"</font>";
+sh.style.animation="";
 sh.style.animation='rotate 5s';
 
 hint.innerHTML='Hint:'+hints[rand];
@@ -171,7 +171,7 @@ pointh=0;
 }
 else
 {
-noti.innerHTML='<font color="blue">Timed out !! Correct Word is '+word[rand]+'</font>';
+noti.innerHTML='<font color="blue" class="glow">Timed out !! Correct Word is '+word[rand]+'</font>';
 
 rand=get_rnd_no();
 
